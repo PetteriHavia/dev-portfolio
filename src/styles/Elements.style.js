@@ -167,6 +167,27 @@ export const ProjectGrid = styled.div`
   gap: 3rem;
 `;
 
+export const ClientProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 3rem;
+`;
+
+export const StyledTab = styled.div.attrs((props) => ({
+  isActive: props.isActive,
+}))`
+  margin-left: 2rem;
+  cursor: pointer;
+
+  ${(props) =>
+    props.$isActive &&
+    css`
+      h3 {
+        border-bottom: 2px solid #55b3d0;
+      }
+    `}
+`;
+
 export const Card = styled.div`
   overflow: hidden;
   border-radius: 5px;
@@ -195,18 +216,49 @@ export const CustomColorSVG = styled.img`
   filter: brightness(0) invert(1);
 `;
 
-export const StyledTab = styled.div.attrs((props) => ({
-  isActive: props.isActive,
-}))`
-  margin-left: 2rem;
-  cursor: pointer;
-  
+//---------------PROJECT PAGE----------------//
 
-  ${(props) =>
-    props.$isActive &&
-    css`
-      h3 {
-        border-bottom: 2px solid #55b3d0;
-      }
-    `}
+export const ProjectInfoContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const ProjectDetails = styled.div`
+  padding: 0rem 0rem 0rem 5rem;
+
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    padding-right: 0rem;
+  }
+`;
+
+export const ProjectInnerContainer = styled(InnerContainer)`
+  align-items: flex-start;
+  img {
+    width: 100%;
+    border-radius: 5px;
+  }
+`;
+
+export const ProjectTools = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  p {
+    margin: 0rem;
+    padding: 0.2rem 1.5rem;
+    background: #383873;
+    border-radius: 5px;
+    color: white;
+  }
 `;
