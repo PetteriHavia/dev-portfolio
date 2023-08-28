@@ -16,7 +16,7 @@ const About = () => {
         <Column>
           <PageHeading>
             <h2>About</h2>
-            <img src={Row} alt="circle row" />
+            <img src={Row} alt="circle illustration" />
           </PageHeading>
           <p>
             Hey, my name is Petteri Havia, a recent graduate from Laurea's
