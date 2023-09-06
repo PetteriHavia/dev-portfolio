@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
 
    :root{
-      --heading-gray:#616161;
+      --heading-gray:#272341;
       --white: #FFF;
       --orange: #FF6224;
       --lg-blue: #55B3D0;
@@ -23,15 +23,21 @@ const GlobalStyle = createGlobalStyle`
    }
 
    h1{
-      font-family: 'Bebas Neue', 'sans-serif';
-      letter-spacing: 8px;
+      font-family: 'Rubik', 'sans-serif';
+      //color: var(--heading-gray);
+      color: #130F49;
    }
 
    h2{
-      font-family: 'Bebas Neue', 'sans-serif';
-      font-size: 3.5rem;
-      color: var(--heading-gray);
-      letter-spacing: 8px;
+      //font-family: 'Bebas Neue', 'sans-serif';
+      font-family: 'Rubik', 'sans-serif';
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #130F49;
+      //background: -webkit-linear-gradient(291deg, #d281ff, #55B3D0);
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+      //letter-spacing: 8px;
    }
 
    p{

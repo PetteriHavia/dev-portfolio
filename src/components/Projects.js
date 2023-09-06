@@ -8,16 +8,17 @@ import {
   ProjectSection,
   Card,
   CardInfo,
-  CustomColorSVG,
   StyledTab,
-  ClientProjectGrid
+  ClientProjectGrid,
+  DetailsButton,
+  CardDetails,
 } from "../styles/Elements.style";
 import row from "../assets/row.svg";
 import { ProjectArray } from "./ProjectsArray";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Projects = () => {
+const Projects = ({projectSectionRef}) => {
   const [toggleIndex, setToggleIndex] = useState(1);
 
   const ProjectCard = ({ item }) => {
@@ -25,14 +26,18 @@ const Projects = () => {
       <Card>
         <Link to={`projects/${item.id}`}>
           <img src={item.img} alt={item.project_name} />
+          <CardDetails className="card-details">
+            <DetailsButton>Details</DetailsButton>
+        </CardDetails>
         </Link>
         <CardInfo>
-          <h3>{item.project_name}</h3>
-          <h3>{item.framework}</h3>
+            <h3>{item.project_name}</h3>
+            <h3>{item.framework}</h3>
         </CardInfo>
       </Card>
     );
   };
+
 
   const personalProjects = ProjectArray.filter(
     (item) => item.type === "Personal"
@@ -45,13 +50,13 @@ const Projects = () => {
   };
 
   return (
-    <ProjectSection>
+    <ProjectSection id="project" ref={projectSectionRef}>
       <ProjectContainer>
         <InnerProjectContainer>
           <ProjectHeading>
             <PageHeading>
               <h2>Projects</h2>
-              <CustomColorSVG src={row} alt="circle illustration" />
+              <img src={row} alt="circle illustration" />
             </PageHeading>
             <TabHeading>
               <StyledTab
