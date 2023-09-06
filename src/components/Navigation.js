@@ -3,24 +3,32 @@ import {
   InnerContainer,
   NavLinks,
   NavLogo,
-
+  NavigationContainer,
 } from "../styles/Elements.style";
+import { Link } from "react-router-dom";
 
-const Navigation = () => {
+const Navigation = ({aboutRef, projectRef, homeRef}) => {
+
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <Container>
+    <NavigationContainer>
       <InnerContainer>
         <NavLogo>
-          <h1>Cool Logo Here</h1>
+          <h1>Logo</h1>
         </NavLogo>
         <NavLinks>
-          <p>&gt; HOME</p>
-          <p>&gt; ABOUT</p>
-          <p>&gt; PROJECTS</p>
-          <p>&gt; CONTACT</p>
+          <Link to="/#home" onClick={() => scrollToSection(homeRef)}><p>&gt; HOME</p></Link>
+          <Link to="/#about" onClick={() => scrollToSection(aboutRef)}><p>&gt; ABOUT</p></Link>
+          <Link to="/#projects" onClick={() => scrollToSection(projectRef)}><p>&gt; PROJECTS</p></Link>
+          <Link to="/#contact"><p>&gt; CONTACT</p></Link>
         </NavLinks>
       </InnerContainer>
-    </Container>
+    </NavigationContainer>
   );
 };
 
