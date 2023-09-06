@@ -1,7 +1,8 @@
-import poke_api_img from '../assets/pokeapiapp.png';
-import task_app_img from '../assets/taskapp.png'
-import kravmagaveikkola_img from '../assets/kravmagaveikkola.png';
-import musicapp_img from '../assets/musicplayer.png';
+import poke_api_img from '../assets/pokeapi-default.png';
+import task_app_img from '../assets/taskapp-default.png'
+import kravmagaveikkola_img from '../assets/kravmaga-default.png';
+import musicapp_img from '../assets/musicapp-default.png';
+import zerodistance_img from '../assets/zerodistance-default.png';
 
 export const ProjectArray = [
     {
@@ -12,7 +13,6 @@ export const ProjectArray = [
         project_info: [
             "This project is a React front-end interface for the public API knows as PokeAPI that contains information about the pokemon series and games. The idea was to create a Pokédex-style application. This app allows users to search for specific Pokémon and view relevant information about them.",
             "The search functionality within the app permits users to look up individual Pokémon using their names or unique ID numbers. Additionally, users have the option to select a particular generation from a dropdown menu (such as Kanto, Johto, Kalos, etc.). Upon selecting a generation, the app displays a list of all the Pokémon belonging to that specific generation.",
-            "React Router was implemented in the project to enable dynamic navigation. Styling of the application was achieved using Styled Components, which was a new tool for me in this project. This allowed for a streamlined and modular approach to styling."
         ],
         github_link: "GitHub_link",
         url_link: "url link",
@@ -30,7 +30,6 @@ export const ProjectArray = [
         project_info: [
             "This project is a React front-end interface for the public API knows as PokeAPI that contains information about the pokemon series and games. The idea was to create a Pokédex-style application. This app allows users to search for specific Pokémon and view relevant information about them.",
             "The search functionality within the app permits users to look up individual Pokémon using their names or unique ID numbers. Additionally, users have the option to select a particular generation from a dropdown menu (such as Kanto, Johto, Kalos, etc.). Upon selecting a generation, the app displays a list of all the Pokémon belonging to that specific generation.",
-            "React Router was implemented in the project to enable dynamic navigation. Styling of the application was achieved using Styled Components, which was a new tool for me in this project. This allowed for a streamlined and modular approach to styling."
         ],
         github_link: "GitHub_link",
         url_link: "url link",
@@ -52,7 +51,6 @@ export const ProjectArray = [
         project_info: [
             "This project is a React front-end interface for the public API knows as PokeAPI that contains information about the pokemon series and games. The idea was to create a Pokédex-style application. This app allows users to search for specific Pokémon and view relevant information about them.",
             "The search functionality within the app permits users to look up individual Pokémon using their names or unique ID numbers. Additionally, users have the option to select a particular generation from a dropdown menu (such as Kanto, Johto, Kalos, etc.). Upon selecting a generation, the app displays a list of all the Pokémon belonging to that specific generation.",
-            "React Router was implemented in the project to enable dynamic navigation. Styling of the application was achieved using Styled Components, which was a new tool for me in this project. This allowed for a streamlined and modular approach to styling."
         ],
         github_link: "GitHub_link",
         url_link: "url link",
@@ -83,12 +81,14 @@ export const ProjectArray = [
         type:"Client"
     },
 
-    /*{
+    {
         id: 5,
-        project_name: "ZeroDistance.solutions",
+        project_name: "Zerodistancesolutions.com",
         framework: "WordPress",
-        img: "IMG-HERE",
-        project_info:"Project Info text",
+        img: zerodistance_img,
+        project_info: [
+            "Project Info text",
+        ],
         github_link: "GitHub_link",
         url_link: "url link",
         tech: [
@@ -96,7 +96,7 @@ export const ProjectArray = [
             "Elementor",
         ],
         type:"Client"
-    },*/
+    },
 
 
 

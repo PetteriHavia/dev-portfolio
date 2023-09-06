@@ -3,7 +3,6 @@ import { ProjectArray } from "../components/ProjectsArray";
 import row from "../assets/row.svg";
 import {
   ProjectInfoContainer,
-  IndividualProjectHeading,
   PageHeading,
   ProjectDetails,
   Column,
@@ -11,10 +10,12 @@ import {
   InnerContainer,
   ProjectInnerContainer,
   ProjectTools,
+  DemoAndGitLink,
 } from "../styles/Elements.style";
 import Navigation from "../components/Navigation";
 import { LiaGithub } from "react-icons/lia";
 import { IconContext } from "react-icons";
+import PageNotFound from "../pages/PageNotFound";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -23,13 +24,14 @@ const ProjectPage = () => {
   const project = ProjectArray.find((item) => item.id === parseInt(id, 10));
 
   if (!project) {
-    return <h2>Project ID not found</h2>;
+    return <PageNotFound />;
   }
 
   return (
     <>
+    <Navigation />
       <Container>
-        <InnerContainer>
+        <InnerContainer className="spacing">
           <PageHeading>
             <h2>Project Details</h2>
             <img src={row} alt="circle illustration" />
@@ -44,19 +46,18 @@ const ProjectPage = () => {
           <Column>
             <ProjectDetails>
               <h2>{project.project_name}</h2>
-              <div>
+              <>
                 {project.project_info.map((item, key) => (
                   <p key={key}>{item}</p>
                 ))}
-              </div>
-              <IconContext.Provider value={{ size: 55 }}>
-                <LiaGithub />
-              </IconContext.Provider>
-              <h3>Project url link</h3>
-              <h3>Tech</h3>
+              </>
+              <DemoAndGitLink>
+                <LiaGithub size={55} color={"#383873"} className="git-icon" />
+                <h3>DEMO</h3>
+              </DemoAndGitLink>
               <ProjectTools>
                 {project.tech.map((item, key) => (
-                    <p key={key}>{item}</p>
+                  <p key={key}>{item}</p>
                 ))}
               </ProjectTools>
             </ProjectDetails>
