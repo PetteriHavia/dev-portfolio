@@ -7,30 +7,29 @@ import {
 } from "../styles/Elements.style";
 import illustration from "../assets/desktop-illustration-hero.svg";
 import { LiaGithub } from "react-icons/lia";
-import { MdEmail } from "react-icons/md";
+import { LiaPaperPlaneSolid} from "react-icons/lia";
 import { IconContext } from "react-icons";
 import Navigation from "./Navigation";
 
-const HeroSection = () => {
+const HeroSection = ({homeRef}) => {
   return (
-    <Section>
-        <Navigation />
-    <Container>
+    <Container id="home" ref={homeRef}>
       <HeroContainer>
         <HeroHeading>
-          <h1>Petteri Havia</h1>
-          <h3>Front-end focused web developer based in Finland</h3>
-          <IconContext.Provider value={{ size: 45, color: "white" }}>
+          <h1>
+            Hi I'm <span>Petteri.</span>
+            <br />
+            Front-end focused developer
+          </h1>
+          <IconContext.Provider value={{ size: 60, color:"#383873"}}>
             <Icons>
               <LiaGithub />
-              <MdEmail />
+              <LiaPaperPlaneSolid />
             </Icons>
           </IconContext.Provider>
         </HeroHeading>
-        <img src={illustration} alt="developer" />
       </HeroContainer>
     </Container>
-    </Section>
   );
 };
 
