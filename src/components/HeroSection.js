@@ -5,6 +5,7 @@ import {
   Icons,
   Section,
 } from "../styles/Elements.style";
+import { Link } from "react-router-dom";
 import illustration from "../assets/desktop-illustration-hero.svg";
 import { LiaGithub } from "react-icons/lia";
 import { LiaPaperPlaneSolid} from "react-icons/lia";
@@ -21,12 +22,12 @@ const HeroSection = ({homeRef}) => {
             <br />
             Front-end focused developer
           </h1>
-          <IconContext.Provider value={{ size: 60, color:"#383873"}}>
+        
             <Icons>
-              <LiaGithub />
+              <Link to="https://github.com/PetteriHavia" target="_blank"><LiaGithub /></Link>
               <LiaPaperPlaneSolid />
             </Icons>
-          </IconContext.Provider>
+         
         </HeroHeading>
       </HeroContainer>
     </Container>
