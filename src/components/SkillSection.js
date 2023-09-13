@@ -32,9 +32,9 @@ import {
             </AboutHeading>
             <Intrested>
               <h3>Next.js</h3>
-              <h3>AI</h3>
-              <h3>Design</h3>
-              <h3>Figma</h3>
+              <h3>Svelte</h3>
+              <h3>Minimalist Design</h3>
+              <h3>Gatsby</h3>
               <h3>Animations</h3>
             </Intrested>
           </Column>
