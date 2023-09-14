@@ -5,13 +5,16 @@ import {
   NavLogo,
   NavigationContainer,
   StyledLink,
+  NightMode,
 } from "../styles/Elements.style";
 import { useState } from "react";
 import {FiMenu, FiX} from 'react-icons/fi';
+import {BsSun, BsMoon} from 'react-icons/bs';
 
 const Navigation = ({aboutRef, projectRef, homeRef}) => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [mode, setMode] = useState(false);
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -21,6 +24,10 @@ const Navigation = ({aboutRef, projectRef, homeRef}) => {
 
   const toggleMenu = () => {
     {isOpen ? setIsOpen(false) : setIsOpen(true)}
+  }
+
+  const toggleNighMode = () => {
+    {mode ? setMode(false) : setMode(true)}
   }
 
   return (
@@ -34,8 +41,11 @@ const Navigation = ({aboutRef, projectRef, homeRef}) => {
           <StyledLink to="/#about" onClick={() => scrollToSection(aboutRef)}>&gt; ABOUT</StyledLink>
           <StyledLink to="/#projects" onClick={() => scrollToSection(projectRef)}>&gt; PROJECTS</StyledLink>
           <StyledLink to="/#contact">&gt; CONTACT</StyledLink>
+          <NightMode>
+            {mode ? <BsMoon onClick={toggleNighMode}/> : <BsSun onClick={toggleNighMode}/>}
+          </NightMode>
         </NavLinkList>
-        {isOpen ? <FiX onClick={toggleMenu}/> : <FiMenu onClick={toggleMenu}/>}
+        {isOpen ? <FiX className="menu-icon" onClick={toggleMenu}/> : <FiMenu className="menu-icon" onClick={toggleMenu}/>}
       </InnerContainer>
     </NavigationContainer>
   );
