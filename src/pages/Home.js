@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/SkillSection";
+import Footer from "../components/Footer";
 import { useRef } from "react";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <About aboutSectionRef={aboutRef}/>
       <Skills />
       <Projects projectSectionRef={projectRef}/>
+      <Footer />
     </>
   );
 };
