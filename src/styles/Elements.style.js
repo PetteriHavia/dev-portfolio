@@ -42,7 +42,7 @@ export const NavigationContainer = styled.nav`
   padding: 1.5rem 2rem;
   z-index: 50;
 
-  svg {
+  .menu-icon {
     font-size: 2.5rem;
     color: #383873;
     transition: ease-out 0.3s;
@@ -52,7 +52,7 @@ export const NavigationContainer = styled.nav`
   }
 
   @media (max-width: 768px) {
-    svg {
+    .menu-icon {
       display: block;
     }
   }
@@ -111,7 +111,16 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const NightMode = styled.div``;
+export const NightMode = styled.div`
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+  svg {
+    color: black;
+    font-size: 1.7rem;
+  }
+`;
 
 //---------HERO-SECTION-------------//
 
@@ -256,6 +265,7 @@ export const AboutHeading = styled(PageHeading)`
     }
     @media (max-width: 850px) {
       justify-content: center;
+      padding-right: 0rem;
     }
   }
 
@@ -269,6 +279,7 @@ export const AboutHeading = styled(PageHeading)`
     }
     @media (max-width: 850px) {
       justify-content: center;
+      padding-left: 0rem;
     }
   }
 `;
@@ -277,7 +288,7 @@ export const Skills = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  margin: 1rem 0rem 2.5rem;
+  margin: 1.5rem 0rem 2.5rem;
   padding: 0rem 1rem 0rem 1rem;
   gap: 1rem;
   h3 {
@@ -341,8 +352,12 @@ export const ProjectHeading = styled.div`
       display: none;
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 600px) {
     flex-direction: column;
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
   }
 `;
 
@@ -362,6 +377,10 @@ export const ProjectGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
   height: 100%;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ClientProjectGrid = styled.div`
@@ -369,6 +388,10 @@ export const ClientProjectGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 3rem;
   height: 100%;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const StyledTab = styled.div.attrs((props) => ({
@@ -430,6 +453,10 @@ export const CardInfo = styled.div`
   color: #130f49;
   h3 {
     font-weight: 500;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
   }
 `;
 
@@ -561,5 +588,22 @@ export const GoBack = styled.div`
   h3 {
     padding-left: 2rem;
     margin: 0;
+  }
+`;
+
+//------------- FOOTER ----------------//
+
+export const FooterBox = styled.footer`
+  text-align: center;
+  padding: 3rem 0rem;
+  background-color: #383873;
+  p {
+    padding: 0.5rem 0rem;
+    color: white;
+  }
+  svg {
+    font-size: 3rem;
+    color: #ffffff;
+    z-index: 200;
   }
 `;

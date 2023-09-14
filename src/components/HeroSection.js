@@ -25,7 +25,6 @@ const HeroSection = ({homeRef}) => {
         
             <Icons>
               <Link to="https://github.com/PetteriHavia" target="_blank"><LiaGithub /></Link>
-              <LiaPaperPlaneSolid />
             </Icons>
          
         </HeroHeading>

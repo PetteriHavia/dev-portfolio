@@ -24,26 +24,21 @@ const GlobalStyle = createGlobalStyle`
 
    h1{
       font-family: 'Rubik', 'sans-serif';
-      //color: var(--heading-gray);
       color: #130F49;
    }
 
    h2{
-      //font-family: 'Bebas Neue', 'sans-serif';
       font-family: 'Rubik', 'sans-serif';
       font-size: 3rem;
       text-transform: uppercase;
       color: #130F49;
-      //background: -webkit-linear-gradient(291deg, #d281ff, #55B3D0);
-    //-webkit-background-clip: text;
-    //-webkit-text-fill-color: transparent;
-      //letter-spacing: 8px;
    }
 
-   p{
-     //color: var(--heading-gray);
+   @media (max-width: 600px) {
+      h2{
+         font-size: 2.5rem;
+      }
    }
-
 `;
 
 export default GlobalStyle;
