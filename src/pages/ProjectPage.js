@@ -29,7 +29,6 @@ const ProjectPage = () => {
 
   return (
     <>
-    <Navigation />
       <Container>
         <InnerContainer className="spacing">
           <PageHeading>
@@ -52,7 +51,7 @@ const ProjectPage = () => {
                 ))}
               </>
               <DemoAndGitLink>
-                <LiaGithub size={55} color={"#383873"} className="git-icon" />
+                <LiaGithub size={55} className="git-icon" />
                 <h3>DEMO</h3>
               </DemoAndGitLink>
               <ProjectTools>
