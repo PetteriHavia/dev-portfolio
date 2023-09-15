@@ -37,7 +37,7 @@ export const NavigationContainer = styled.nav`
   position: -webkit-sticky;
   display: flex;
   top: 0;
-  background-color: white;
+  background-color: ${({ theme }) => theme.nav_background};
   justify-content: center;
   padding: 1.5rem 2rem;
   z-index: 50;
@@ -92,7 +92,7 @@ export const NavLinkList = styled.div.attrs((props) => ({
         right: -0.5rem;
         background-color: white;
         padding: 1.5rem;
-        box-shadow: 0px 0px 7px 2px #d9d9d9cc;
+        box-shadow: ${({ theme }) => theme.menu_box_shadow};
       `}
   }
 `;
@@ -101,6 +101,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 0rem 1.2rem;
   font-weight: 500;
+  color: ${({ theme }) => theme.color.nav_links};
 
   &:active {
     color: #55b3d0;
@@ -116,9 +117,9 @@ export const NightMode = styled.div`
   display: flex;
   align-items: center;
   margin-left: 1.5rem;
+
   svg {
-    color: black;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -170,7 +171,7 @@ export const Icons = styled.div`
     position: relative;
     margin-right: 2rem;
     font-size: 4rem;
-    color: #383873;
+    color: ${({ theme }) => theme.color.git_icon_color};
     transition: ease-out 0.3s;
     top: 0;
 
@@ -213,10 +214,8 @@ export const Column = styled.div`
   flex-basis: 48%;
   p {
     margin-top: 1rem;
-    font-size: 1.1rem;
     padding-right: 3rem;
     line-height: 1.6;
-    color: #616161;
   }
 
   @media (max-width: 992px) {
@@ -420,7 +419,7 @@ export const Card = styled.div`
   border-radius: 5px;
   padding: 0.5rem;
   background-color: white;
-  box-shadow: 0px 0px 7px 2px #d9d9d9cc;
+  box-shadow: ${({ theme }) => theme.project_card_shadow};
   animation: ${fadeIn} ease-in 0.8s;
 
   img {
@@ -486,7 +485,7 @@ export const CardDetails = styled.div`
   transform: translate(50%, -50%);
 `;
 
-//---------------PROJECT PAGE----------------//
+//---------------PROJECT-PAGE----------------//
 
 export const ProjectInfoContainer = styled.div`
   display: flex;
@@ -533,6 +532,7 @@ export const DemoAndGitLink = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: ${({ theme }) => theme.color.git_icon_color};
   }
 `;
 
