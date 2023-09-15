@@ -1,15 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-
-   :root{
-      --heading-gray:#272341;
-      --white: #FFF;
-      --orange: #FF6224;
-      --lg-blue: #55B3D0;
-      --dg-purple: #383873;
-
-   }
+export const GlobalStyle = createGlobalStyle`
 
    *{
     box-sizing: border-box;
@@ -19,19 +10,24 @@ const GlobalStyle = createGlobalStyle`
 
    body{
       font-family: 'Poppins', 'sans-serif';
-
+      background: ${({ theme }) => theme.body};
+      color: ${({ theme }) => theme.text};
    }
 
    h1{
       font-family: 'Rubik', 'sans-serif';
-      color: #130F49;
+      color: ${({ theme }) => theme.color.h1_heading};
    }
 
    h2{
       font-family: 'Rubik', 'sans-serif';
       font-size: 3rem;
       text-transform: uppercase;
-      color: #130F49;
+   }
+
+   p{
+      font-size: 1.1rem;
+      color: ${({ theme }) => theme.color.p_text};
    }
 
    @media (max-width: 600px) {
