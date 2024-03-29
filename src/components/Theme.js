@@ -8,6 +8,7 @@ export const lightTheme = {
     p_text: "#333",
     git_icon_color: "#383873;",
     nav_links: "#383873",
+    menu_icon: "#383873"
   },
   menu_box_shadow: "0px 0px 7px 2px #d9d9d9cc",
   nav_background: "#fff",
@@ -23,8 +24,9 @@ export const darkTheme = {
     p_text: "#fff",
     git_icon_color: "#fff;",
     nav_links: "#fff",
+    menu_icon: "#fff"
   },
   box_shadow: "0px 0px 2px 2px #d9d9d9cc",
-  nav_background: "#363537",
+  nav_background: "#383873",
   project_card_shadow: "0px 0px 5px 0px #d9d9d9cc",
 };

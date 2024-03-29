@@ -19,7 +19,7 @@ const Navigation = ({ aboutRef, projectRef, homeRef, theme, setTheme }) => {
   };
 
   const toggleMenu = () => {
-      isOpen ? setIsOpen(false) : setIsOpen(true);
+    isOpen ? setIsOpen(false) : setIsOpen(true);
   };
 
   return (
