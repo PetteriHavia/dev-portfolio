@@ -37,14 +37,14 @@ export const NavigationContainer = styled.nav`
   position: -webkit-sticky;
   display: flex;
   top: 0;
-  background-color: ${({ theme }) => theme.nav_background};
   justify-content: center;
   padding: 1.5rem 2rem;
   z-index: 50;
 
   .menu-icon {
     font-size: 2.5rem;
-    color: #383873;
+    //color: #383873;
+    color: ${({ theme }) => theme.color.menu_icon};
     transition: ease-out 0.3s;
     top: 0;
     display: none;
@@ -83,14 +83,14 @@ export const NavLinkList = styled.div.attrs((props) => ({
     display: none;
 
     ${(props) =>
-      props.$isOpen &&
-      css`
+    props.$isOpen &&
+    css`
         display: flex;
         flex-direction: column;
         position: absolute;
         top: -0.5rem;
         right: -0.5rem;
-        background-color: white;
+        background-color: ${({ theme }) => theme.nav_background};
         padding: 1.5rem;
         box-shadow: ${({ theme }) => theme.menu_box_shadow};
       `}
