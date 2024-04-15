@@ -3,16 +3,11 @@ import {
   HeroContainer,
   HeroHeading,
   Icons,
-  Section,
 } from "../styles/Elements.style";
 import { Link } from "react-router-dom";
-import illustration from "../assets/desktop-illustration-hero.svg";
 import { LiaGithub } from "react-icons/lia";
-import { LiaPaperPlaneSolid} from "react-icons/lia";
-import { IconContext } from "react-icons";
-import Navigation from "./Navigation";
 
-const HeroSection = ({homeRef}) => {
+const HeroSection = ({ homeRef }) => {
   return (
     <Container id="home" ref={homeRef}>
       <HeroContainer>
@@ -22,11 +17,9 @@ const HeroSection = ({homeRef}) => {
             <br />
             Front-end focused developer
           </h1>
-        
-            <Icons>
-              <Link to="https://github.com/PetteriHavia" target="_blank"><LiaGithub /></Link>
-            </Icons>
-         
+          <Icons>
+            <Link to="https://github.com/PetteriHavia" target="_blank"><LiaGithub /></Link>
+          </Icons>
         </HeroHeading>
       </HeroContainer>
     </Container>
