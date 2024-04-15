@@ -40,6 +40,7 @@ export const NavigationContainer = styled.nav`
   justify-content: center;
   padding: 1.5rem 2rem;
   z-index: 50;
+  background-color: ${({ theme }) => theme.body};
 
   .menu-icon {
     font-size: 2.5rem;
@@ -70,6 +71,9 @@ export const InnerContainer = styled.div`
 
   &.spacing {
     padding: 5rem 0rem;
+    @media (max-width: 600px){
+      justify-content: center;
+    }
   }
 `;
 
@@ -211,7 +215,7 @@ export const InnerContainerSkills = styled(InnerContainer)`
 `;
 
 export const Column = styled.div`
-  flex-basis: 48%;
+  flex-basis: 50%;
   p {
     margin-top: 1rem;
     padding-right: 3rem;
@@ -241,6 +245,12 @@ export const PageHeading = styled.div`
   img {
     opacity: 0.7;
     margin-left: 2rem;
+  }
+
+  @media (max-width: 850px) {
+    h2{
+      font-size: 2rem;
+    }
   }
 
   @media (max-width: 600px) {
@@ -491,10 +501,10 @@ export const ProjectInfoContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 0rem 2rem;
 `;
 
 export const ProjectDetails = styled.div`
-  padding: 0rem 0rem 0rem 5rem;
 
   h2 {
     font-size: 2rem;
@@ -512,9 +522,16 @@ export const ProjectDetails = styled.div`
 
 export const ProjectInnerContainer = styled(InnerContainer)`
   align-items: flex-start;
+  gap: 5rem;
+  padding-bottom: 5rem;
   img {
     width: 100%;
+    height: 100%;
     border-radius: 5px;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
   }
 `;
 
@@ -534,6 +551,10 @@ export const DemoAndGitLink = styled.div`
     justify-content: center;
     color: ${({ theme }) => theme.color.git_icon_color};
   }
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
 `;
 
 export const ProjectTools = styled.div`
@@ -547,6 +568,10 @@ export const ProjectTools = styled.div`
     background: #383873;
     border-radius: 5px;
     color: white;
+  }
+
+  @media (max-width: 600px) {
+    justify-content: center;
   }
 `;
 

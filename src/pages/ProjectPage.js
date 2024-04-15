@@ -12,10 +12,9 @@ import {
   ProjectTools,
   DemoAndGitLink,
 } from "../styles/Elements.style";
-import Navigation from "../components/Navigation";
 import { LiaGithub } from "react-icons/lia";
-import { IconContext } from "react-icons";
 import PageNotFound from "../pages/PageNotFound";
+import Footer from "../components/Footer";
 
 const ProjectPage = () => {
   const { id } = useParams();
@@ -52,7 +51,7 @@ const ProjectPage = () => {
               </>
               <DemoAndGitLink>
                 <LiaGithub size={55} className="git-icon" />
-                <h3>DEMO</h3>
+                <h3>DEMO (coming soon)</h3>
               </DemoAndGitLink>
               <ProjectTools>
                 {project.tech.map((item, key) => (
@@ -63,6 +62,7 @@ const ProjectPage = () => {
           </Column>
         </ProjectInnerContainer>
       </ProjectInfoContainer>
+      <Footer />
     </>
   );
 };

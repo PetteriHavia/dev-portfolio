@@ -24,7 +24,7 @@ export const darkTheme = {
     p_text: "#fff",
     git_icon_color: "#fff;",
     nav_links: "#fff",
-    menu_icon: "#fff"
+    menu_icon: "#fff",
   },
   box_shadow: "0px 0px 2px 2px #d9d9d9cc",
   nav_background: "#383873",

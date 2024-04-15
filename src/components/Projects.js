@@ -18,26 +18,25 @@ import { ProjectArray } from "./ProjectsArray";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Projects = ({projectSectionRef}) => {
-  const [toggleIndex, setToggleIndex] = useState(1);
-
-  const ProjectCard = ({ item }) => {
-    return (
-      <Card>
-        <Link to={`projects/${item.id}`}>
-          <img src={item.img} alt={item.project_name} />
-          <CardDetails className="card-details">
-            <DetailsButton>Details</DetailsButton>
+const ProjectCard = ({ item }) => {
+  return (
+    <Card>
+      <Link to={`projects/${item.id}`}>
+        <img src={item.img} alt={item.project_name} />
+        <CardDetails className="card-details">
+          <DetailsButton>Details</DetailsButton>
         </CardDetails>
-        </Link>
-        <CardInfo>
-            <h3>{item.project_name}</h3>
-            <h3>{item.framework}</h3>
-        </CardInfo>
-      </Card>
-    );
-  };
+      </Link>
+      <CardInfo>
+        <h3>{item.project_name}</h3>
+        <h3>{item.framework}</h3>
+      </CardInfo>
+    </Card>
+  );
+};
 
+const Projects = ({ projectSectionRef }) => {
+  const [toggleIndex, setToggleIndex] = useState(1);
 
   const personalProjects = ProjectArray.filter(
     (item) => item.type === "Personal"
@@ -82,21 +81,21 @@ const Projects = ({projectSectionRef}) => {
           <ProjectGrid>
             {toggleIndex === 1 && (
               <>
-                {ProjectArray.map((item, key) => (
+                {ProjectArray.map((item) => (
                   <ProjectCard key={item.id} item={item} />
                 ))}
               </>
             )}
             {toggleIndex === 2 && (
               <>
-                {personalProjects.map((item, key) => (
+                {personalProjects.map((item) => (
                   <ProjectCard key={item.id} item={item} />
                 ))}
               </>
             )}
             {toggleIndex === 3 && (
               <ClientProjectGrid>
-                {clientProjects.map((item, key) => (
+                {clientProjects.map((item) => (
                   <ProjectCard key={item.id} item={item} />
                 ))}
               </ClientProjectGrid>
